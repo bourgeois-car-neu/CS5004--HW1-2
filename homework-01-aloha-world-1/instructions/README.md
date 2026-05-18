@@ -113,12 +113,29 @@ classDiagram
     AlohaWorld --> ConsoleView : uses
     ConsoleView --> Greeter : uses
     class AlohaWorld {
+        - main(args String[]) void 
         
     }
     class Greeter {
+        - name: String
+        - locality: int
+        - Greeter(name String, locality int)
+        - getName() String
+        - getLocality() int
+        - setLocality(locality: int) void
+        - greet() String
+        - TBD greet(asciiOnly: bool) String
+        - getLocalityString() String
+        - hashCode() int
+        - TBD equals(obj Object) bool
+        - toString() String
         
     }
     class ConsoleView {
+        - checkRunAgain : bool
+        - getName () String
+        - getLocality() int
+        - printGreeting(greeting: String) void
         
     }
 ```
